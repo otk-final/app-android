@@ -7,19 +7,24 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactInstanceManager
+import com.facebook.react.ReactPackage
 import com.facebook.react.ReactRootView
+import com.facebook.react.bridge.JSBundleLoader
+import com.facebook.react.bridge.JSBundleLoaderDelegate
+import com.facebook.react.common.LifecycleState
+import com.facebook.react.shell.MainReactPackage
 
 class MainActivity : ReactActivity() {
 
-    var DEV_BUNDLE_URL = "http://localhost:8081/index.bundle?platform=android"
+    var DEV_BUNDLE_URL = "http://192.168.31.105:8081/index.bundle?platform=android"
 
     override fun getMainComponentName(): String {
         return "RNApp"
     }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
 //        val builder = ReactInstanceManager.builder()
 //        builder.setApplication(application).setCurrentActivity(this)
 //            .setBundleAssetName("index.android.bundle").setJSMainModulePath("index")
@@ -49,7 +54,7 @@ class MainActivity : ReactActivity() {
 //            startReactApplication(builder.build(), mainComponentName)
 //        }
 //        setContentView(rootView)
-//    }
+    }
 }
 
 

@@ -24,6 +24,10 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): MutableList<ReactPackage> {
             return mutableListOf<ReactPackage>(MainReactPackage())
         }
+
+        override fun getJSMainModuleName(): String {
+            return "index"
+        }
     }
 
 

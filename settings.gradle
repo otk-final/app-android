@@ -18,10 +18,10 @@ dependencyResolutionManagement {
         maven {
             url "$rootDir.parent/rn/node_modules/react-native/android"
         }
-//        maven {
-//            // Android JSC is installed from npm
-//            url("$rootDir.parent/rn/node_modules/jsc-android/dist")
-//        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir.parent/rn/node_modules/jsc-android/dist")
+        }
 
         mavenLocal()
         google()
