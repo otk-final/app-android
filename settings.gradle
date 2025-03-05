@@ -14,14 +14,21 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+
+        maven {
+            url "$rootDir.parent/rn/node_modules/react-native/android"
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir.parent/rn/node_modules/jsc-android/dist")
+        }
+
+        mavenLocal()
         google()
         mavenCentral()
     }
 }
 
+
 rootProject.name = "android"
 include ':app'
-
-
-include ":react-native"
-project(":react-native").projectDir = new File(rootProject.projectDir, "../rn/node_modules/react-native/android")
